@@ -12,7 +12,7 @@ $senha=$_POST['senha'];
 
 $conn = getConnection();
 
-$sql = "SELECT * FROM usuario where login = :log and senha = md5(:sen)";
+$sql = "SELECT * FROM login where login = :log and senha = md5(:sen)";
 
 $stmt = $conn->prepare($sql);
 $stmt->bindValue(":log",$login);

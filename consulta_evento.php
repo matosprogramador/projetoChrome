@@ -76,7 +76,7 @@ if($total > 0) {
 
                         ?>
                     <tr> 
-                    <td><input type="checkbox" style="width:35px; height:38px ;"></td>
+                    <td><input value='<?=$value ['idEvento'];?>' name='eventos' type="checkbox" style="width:35px; height:38px ;"></td>
                     
                     <th><?=$value ['data_br'];?>h às <?=$value ['data_br2'];?>h </th>
                     <td><?=$value ['turma'];?></td>
@@ -95,7 +95,7 @@ if($total > 0) {
                 </tbody>
                 <tfoot>
                     <td>
-            <?php echo "<button  class='btn btn-danger'  > 
+            <?php echo "<button id='delete_todos'  class='btn btn-danger'  > 
             <b>Excluir</b>
             </button>"; ?>
                     </td>
@@ -145,7 +145,7 @@ if($total > 0) {
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" id='corpo_modal'>
             Você realmente deseja deletar esse evento?
         </div>
         <div class="modal-footer">

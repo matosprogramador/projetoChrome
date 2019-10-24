@@ -5,18 +5,20 @@ $usuario = $_SESSION['usuario'];
 
 include './coneccao.php';
 
-$idEvento = $_POST['idEvento'];
+$id= $_POST['idEvento'];
 
 $conn = getConnection();
 
-$sql =  "DELETE FROM hora WHERE idEvento = :id and criador = :cria ";
+$sql = "DELETE FROM `hora` WHERE idEvento in (:id)";
 
 $stmt = $conn->prepare($sql);
-$stmt->bindValue(":id",$idEvento);
-$stmt->bindValue(":cria",$usuario);
+$stmt->bindValue(":id",$id);
 $stmt->execute();
 
-
+$sql2 = 'INSERT INTO teste (oque) VALUES(?)';
+$stmt2 = $conn->prepare($sql2);
+$stmt2-> bindValue(1,$id);
+$stmt2-> execute();
 
 
 
