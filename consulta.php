@@ -36,7 +36,7 @@
 
         <div class=" row " >
             <div class="col">                                 
-                <button style= "width: 192px; margin-top:10px;" class="form-control  btn-primary" href="#" onclick='listar_usuario(1, 5)' > consultar</button>                                           
+                <button style= "width: 192px; margin-top:10px;" class="form-control  btn-primary btnPadrao" href="#" onclick='listar_usuario(1, 5)' > consultar</button>                                           
             </div>
         </div>
 

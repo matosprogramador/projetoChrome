@@ -15,15 +15,24 @@ main{
 footer ul{
 	list-style: none;
 }
+.btnPadrao{
+	background-color: #00438A;
+}
 
 footer{
-	background: #5f9f9f;
+	background: #00438A;
 	padding: 10px 0 10px 0;
 	color:white; 
 }
 footer a {
 	text-decoration: none;
 	color:white; 
+}
+
+
+#cards a {
+	text-decoration: none;
+	color:black;
 }
 
 footer a:hover {
@@ -33,9 +42,14 @@ footer a:hover {
 
 #logo img {
 	 width: 50%;
- 	 height: auto;
+	  height: auto;
+	  background-color: #f8f9fa;
 }
 
+.navbar-brand img {
+	width: 38%;
+	height: auto;
+}
 
 #imgs2 img {
 	
@@ -47,6 +61,15 @@ footer a:hover {
   	top:1%;
   	transform: translate(-50%, 2%);
  	 
+}
+
+
+#imgs1 {
+	background-color: #f8f9fa;
+}
+
+#imgs2 {
+	background-color: #f8f9fa;
 }
 
 #imgs1 img {

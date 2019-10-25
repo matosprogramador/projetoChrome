@@ -20,35 +20,35 @@
       <div class="row">
 
         <div class="col d-flex justify-content-center" id="cards">
-
+        <a href='formulario.php'>
            <div class="card " style="width: 18rem;" id="imgs1">
 
               <img class="card-img-top" src="imagens/chromebook1.png" alt="Card image cap">
 
               <div class="card-body">
                 
-                <a href="formulario.php" class="btn btn-primary">Agendar</a>
+              <p class="nav-link">Agendar</p>
 
               </div>
 
            </div>
-
+       </a>
          </div>
 
          <div class="col d-flex justify-content-center" id="cards">
-
-            <div class="card " style="width: 18rem;" id="imgs2">
+         <a href='consulta.php'>
+            <div class="card " style=" width: 18rem;" id="imgs2">
 
                 <img class="card-img-top" src="imagens/buscar.png" alt="Card image cap" >
 
                 <div class="card-body">
-
                   
-                  <a href="consulta.php" class="btn btn-primary">Consultar</a>
+                  <p class="nav-link">Consultar</p>
 
                 </div>
 
-            </div> 
+            </div>
+          </a> 
          </div>
 
         </div>

@@ -76,7 +76,7 @@ if($total > 0) {
 
                         ?>
                     <tr> 
-                    <td><input value='<?=$value ['idEvento'];?>' name='eventos' type="checkbox" style="width:35px; height:38px ;"></td>
+                    <td><input value='<?=$value ['idEvento'];?>' name='eventos' type="checkbox" style="width:35px; height:38px ;"><br><?=$value ['idEvento'];?></td>
                     
                     <th><?=$value ['data_br'];?>h às <?=$value ['data_br2'];?>h </th>
                     <td><?=$value ['turma'];?></td>
@@ -107,7 +107,7 @@ if($total > 0) {
         
         
         <?php echo "<button style='margin: 0px 0px 0px 5px;' class='btn btn-primary' id='consultar2' href='#' onclick='listar_usuario( $pagina-1 , $quant_result_pg)' "; if ($pagina <= 1 ){
-                echo "disabled"; } echo " > anterior </button>"; ?>
+                echo "disabled"; } echo " > Anterior </button>"; ?>
 
                     <?php for ($i = $pagina - 2 ; $i <= $pagina -1  ; $i++ ){
                             if ($i >= 1){
@@ -129,7 +129,7 @@ if($total > 0) {
                     }?>
 
                     <?php echo "<button style='margin: 0px 0px 0px 5px;' class='btn btn-primary' id='consultar2' href='#' onclick='listar_usuario( $pagina+1 , $quant_result_pg)' "; if ($pagina >= $quantidade_pg ){
-                echo "disabled"; } echo " > próximo </button>"; ?>
+                echo "disabled"; } echo " > Próximo </button>"; ?>
 
             
         

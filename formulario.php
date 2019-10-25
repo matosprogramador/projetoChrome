@@ -34,7 +34,7 @@
         <div class="row">
 
           <div class="col-sm" id="logo" >
-            <img src="imagens/chromebook.png" width="300" height="400">
+            <img src="imagens/chromebook.png" width="200" height="300">
           </div>
 
         
@@ -117,20 +117,21 @@
 
               <div class="form-group row">
 
-                <div class="col-auto col-sm-4  col-md-3">
+                <div class="col-4 col-sm-3  col-md-3">
                   <label for="example-date-input" class="col- col-form-label">QUANTIDADE:</label>
                 </div>
                 
 
-                <div class="col-9">   
+                <div class="col-12 col-sm-9 col-md-9 ">   
                     <input class="form-control" type="numer" min="1" max="80" name="quantidade"  id="example-date-input" required="">
                 </div>
 
               </div>
 
-    
-                <div class='container d-flex justify-content-center'>
-                        <input class=" btn btn-success" type="submit" value="Agendar" id="bot" >
+                  <div class='row'> 
+                    <div class='col'> 
+                      <input style='width: 100%;' class=" btn btn-primary btnPadrao" type="submit" value="Agendar" id="bot" >
+                    </div>
                 </div>
 
             </form> 

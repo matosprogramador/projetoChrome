@@ -64,10 +64,10 @@ $inter = date_interval_format($resultado, '%a');
 
 
 $dataI = new DateTime($hora . ' ' . $data);
-$dataI2 = $dataI->format('Y-m-d H:i:s');
+$dataI2 = $dataI->format('Y-m-d H');
 
 $dataF = new DateTime($hora2 . ' ' . $data2);
-$dataF2 = $dataF->format('Y-m-d H:i:s');
+$dataF2 = $dataF->format('Y-m-d H');
 
 
 $conn = getConnection();
