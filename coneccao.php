@@ -7,7 +7,7 @@
 
 function getConnection(){
 
-	$dsn='mysql:host=localhost;dbname=chrome';
+	$dsn='mysql:host=localhost;dbname=epiz_24533750_chrome';
 	$user ='root';
 	$pass= '';
 

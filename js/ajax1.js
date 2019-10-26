@@ -58,7 +58,35 @@ function deleta_evento(idEvento){
 	$.ajax({
 		method: "POST",
 		url: "consulta_eventoDelete.php",
-		data: {idEvento:idEvento}
+		data: {idEvento:idEvento},
+		success: function(data){
+			//adicionar o toast no local definido
+			$('#toast-place').append(` 
+			<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-delay="3000">
+			  <div class="toast-header bg-success">
+				<strong class="mr-auto text-white" >Parabéns</strong>
+				<small class="text-white">Agora</small>
+				<button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			<div class="toast-body">
+			  Evento(s) apagado(s) com sucesso!
+			</div>
+		  </div>
+				  `)
+			
+			$('.toast').toast('show');
+  
+			console.log("show");
+  
+			//remover o toast
+			$('.toast').on('hidden.bs.toast', e=> {
+			  $(e.currentTarget).remove();
+			  console.log('hide')
+			})
+			
+		}
 	})
 }
 
