@@ -1,6 +1,6 @@
 <?php
 
-$vari = $_POST['select'];
+$nome = $_POST['nome'];
 
 
-echo $vari;
+echo $nome;

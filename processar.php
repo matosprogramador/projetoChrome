@@ -14,42 +14,34 @@ $quantidade = $_POST['quantidade'];
 ?> <script> alert($ano)</script> <?php
 
 if($data > $data2){
-	?> <script>window.location.href = "formulario.php"; 
+	
     
-    alert("A segunda data não ser inferior a primeira!");
-    
-    </script> <?php
+    echo"A segunda data não pode ser inferior a primeira!";
+	
+	$color = 'danger';
    
 	exit();
 }
 
 
 if ($data < date('Y-m-d')) {
-	?> <script>window.location.href = "formulario.php"; 
+	
     
-    alert("Você não pode marcar para uma data inferior ao dia de hoje!");
-    
-    </script> <?php
+   echo"Você não pode marcar para <br> uma data inferior ao dia de hoje!";
+   $color = 'danger';
    
 	exit();
 }
 
 if ($hora > $hora2) {
-	?> <script>alert("O primeiro horario não pode ser maior que o segundo");
-    window.location.href = "formulario.php";
-    </script> 
-    <?php
-    
+	echo"O primeiro horario não <br> pode ser maior que o segundo";
+    $color = 'danger';
 	exit();
 }
 
 if ($quantidade > 80) {
-	?> <script>alert("Quantidade de chromes muito alta para um unico horario!");
-    window.location.href = "formulario.php";
-    </script> 
-    
-    <?php
-   
+echo"Quantidade de chromes <br> muito alta para um unico horario!";
+$color = 'danger';
 	exit();
 }
 
@@ -87,10 +79,9 @@ $total = count($result);
 ?> <script> console.log(<?php echo $inter ;?>)</script> <?php
 
 if($total > 0){
-    ?> <script>alert("Quantidade de chrome books indiponivel para esse horario ");
-    window.location.href = "formulario.php";
-    </script> 
-    <?php
+
+   echo"Quantidade de chrome books indiponivel para esse horario ";
+    
 	exit();
 }
 
@@ -126,10 +117,8 @@ for($y = 0 ; $y <= $inter ; $y++){
     
     if($stmt2->execute()){
         if($y == $inter){
-           ?> <script>alert("Salvo com sucesso!");
-            window.location.href = "formulario.php";
-            </script> 
-            <?php
+           echo"Salvo com sucesso!";
+           
           exit();
         }
 	

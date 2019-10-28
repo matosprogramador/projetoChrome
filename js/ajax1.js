@@ -1,6 +1,49 @@
 var quant_result_pg = 5;
 var pagina = 1;
 
+$(document).ready(function(){
+	$('#chrome').on('submit', function (e){
+	  e.preventDefault();
+	  var data = $(this).serialize();
+	  $.ajax({
+		url:'processar.php',
+		method:'post',
+		data:{data,
+		success:function(nome){
+		  $('#toast-place').append(` 
+		<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-delay="3000">
+		  <div class="toast-header bg-success">
+			<strong class="mr-auto text-white" >Parabéns</strong>
+			<small class="text-white">Agora</small>
+			<button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		<div class="toast-body">`+
+		nome + `
+		</div>
+	  </div>`)
+	
+	$('.toast').toast('show');
+	  console.log('show');
+	  $('.toast').on('hidden.bs.toast', e=> {
+		$(e.currentTarget).remove();
+		console.log('hide')
+		}) 
+	
+	}
+
+	  
+		
+	  
+
+	  })
+	  
+	})
+   })
+
+
+
 $(document).on('click', '#delete_todos',function(){
 
  var eventos = document.querySelectorAll('[name=eventos]:checked');
