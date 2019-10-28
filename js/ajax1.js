@@ -8,7 +8,7 @@ $(document).ready(function(){
 	  $.ajax({
 		url:'processar.php',
 		method:'post',
-		data:{data,
+		data:data,
 		success:function(nome){
 		  $('#toast-place').append(` 
 		<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-delay="3000">
@@ -29,18 +29,14 @@ $(document).ready(function(){
 	  $('.toast').on('hidden.bs.toast', e=> {
 		$(e.currentTarget).remove();
 		console.log('hide')
-		}) 
-	
-	}
-
-	  
-		
-	  
-
-	  })
-	  
+		})
+	  this.reset();} 
 	})
-   })
+  })	
+})
+	  
+	
+   
 
 
 

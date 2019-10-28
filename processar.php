@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-include './coneccao.php';
+include './conexao.php';
 
 
 $ano = $_POST['select'];
@@ -11,36 +11,37 @@ $hora = $_POST['hora'];
 $hora2 = $_POST['hora2'];
 $quantidade = $_POST['quantidade'];
 
-?> <script> alert($ano)</script> <?php
 
 if($data > $data2){
-	
-    
-    echo"A segunda data não pode ser inferior a primeira!";
-	
-	$color = 'danger';
+
+$reposta_json["mensagem"] = "A segunda data não pode ser inferior a primeira!";
+$reposta_json["color"] = "danger";
+ 
+echo json_encode($reposta_json);
+ 
    
 	exit();
 }
 
 
 if ($data < date('Y-m-d')) {
-	
+	$reposta_json = '{"mensagem":"A segunda data não pode ser inferior a primeira!", "color":"danger"}'
+ echo jason_decode($reposta_json);
     
-   echo"Você não pode marcar para <br> uma data inferior ao dia de hoje!";
+   $mensagem = "Você não pode marcar para <br> uma data inferior ao dia de hoje!";
    $color = 'danger';
    
 	exit();
 }
 
 if ($hora > $hora2) {
-	echo"O primeiro horario não <br> pode ser maior que o segundo";
+	$mensagem = "O primeiro horario não <br> pode ser maior que o segundo";
     $color = 'danger';
 	exit();
 }
 
 if ($quantidade > 80) {
-echo"Quantidade de chromes <br> muito alta para um unico horario!";
+$mensagem = "Quantidade de chromes <br> muito alta para um unico horario!";
 $color = 'danger';
 	exit();
 }
