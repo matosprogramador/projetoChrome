@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-include './coneccao.php';
+include './conexao.php';
 
 $usuario = $_SESSION['usuario'];
 
@@ -59,7 +59,6 @@ if($total > 0) {
     </div>
         
         <main style="margin-top: 20px;">
-        <div id="alerta"> </div>
             <table class="table table-striped table-sm" style="text-align:center;">
                 <thead>
                     <tr>
@@ -156,17 +155,16 @@ if($total > 0) {
     </div>
     </div>
 
-        
     </main>
 
         
-    </body>
+    
 </html>           
 <?php
 
 } else{  ?> 
 
-<p class="alert alert-danger"  role="alert" style="text-align:center;">Nenhum registro encontrado!</p>
+<p class="alert alert-danger"  role="alert" style="margin-top: 20px; text-align:center;">Nenhum registro encontrado!</p>
 
 <?php } ?>
  

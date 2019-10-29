@@ -1,6 +1,6 @@
 <?php 
 
-include './coneccao.php';
+include './conexao.php';
 
 $data = $_POST['data'];
 

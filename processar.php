@@ -13,36 +13,35 @@ $quantidade = $_POST['quantidade'];
 
 
 if($data > $data2){
-
-$reposta_json["mensagem"] = "A segunda data não pode ser inferior a primeira!";
-$reposta_json["color"] = "danger";
- 
-echo json_encode($reposta_json);
- 
-   
+	$resposta_json["title"] = "ERRO";
+	$resposta_json["mensagem"] = "A segunda data não pode ser inferior a primeira!";
+	$resposta_json["color"] = "danger";
+	echo json_encode($resposta_json);
 	exit();
 }
 
 
 if ($data < date('Y-m-d')) {
-	$reposta_json = '{"mensagem":"A segunda data não pode ser inferior a primeira!", "color":"danger"}'
- echo jason_decode($reposta_json);
-    
-   $mensagem = "Você não pode marcar para <br> uma data inferior ao dia de hoje!";
-   $color = 'danger';
-   
+	$resposta_json["title"] = "ERRO";
+	$resposta_json["mensagem"] = "Você não pode marcar para <br> uma data inferior ao dia de hoje!";
+	$resposta_json["color"] = "danger";
+	echo json_encode($resposta_json);
 	exit();
 }
 
 if ($hora > $hora2) {
-	$mensagem = "O primeiro horario não <br> pode ser maior que o segundo";
-    $color = 'danger';
+	$resposta_json["title"] = "ERRO";
+	$resposta_json["mensagem"] = "O primeiro horario não <br> pode ser maior que o segundo!";
+	$resposta_json["color"] = "danger";
+	echo json_encode($resposta_json);
 	exit();
 }
 
 if ($quantidade > 80) {
-$mensagem = "Quantidade de chromes <br> muito alta para um unico horario!";
-$color = 'danger';
+	$resposta_json["title"] = "ERRO";
+	$resposta_json["mensagem"] = "Quantidade de chromes <br> muito alta para um unico horario!";
+	$resposta_json["color"] = "danger";
+	echo json_encode($resposta_json);
 	exit();
 }
 
@@ -77,12 +76,12 @@ $result = $stmt->fetchAll();
 
 $total = count($result);
 
-?> <script> console.log(<?php echo $inter ;?>)</script> <?php
 
 if($total > 0){
-
-   echo"Quantidade de chrome books indiponivel para esse horario ";
-    
+	$resposta_json["title"] = "ERRO";
+	$resposta_json["mensagem"] = "Quantidade de chrome books indiponivel para esse horario!";
+	$resposta_json["color"] = "danger";
+	echo json_encode($resposta_json);
 	exit();
 }
 
@@ -118,13 +117,19 @@ for($y = 0 ; $y <= $inter ; $y++){
     
     if($stmt2->execute()){
         if($y == $inter){
-           echo"Salvo com sucesso!";
-           
-          exit();
+			$resposta_json["title"] = "Parabéns";
+			$resposta_json["mensagem"] = "Salvo com sucesso!";
+			$resposta_json["color"] = "success";
+			echo json_encode($resposta_json);
+			exit();
         }
 	
 	}else{
-		echo 'Erro ao salvar!';
+		$resposta_json["title"] = "ERRO";
+		$resposta_json["mensagem"] = "Erro ao salvar!";
+		$resposta_json["color"] = "danger";
+		echo json_encode($resposta_json);
+		exit();
 	}	
 
 	

@@ -3,7 +3,7 @@ session_start();
 
 $usuario = $_SESSION['usuario'];
 
-include './coneccao.php';
+include './conexao.php';
 
 $id= $_POST['idEvento'];
 

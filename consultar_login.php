@@ -1,6 +1,6 @@
 <?php
 session_start();
-include './coneccao.php';
+include './conexao.php';
 
 if(empty($_POST['login']) || empty($_POST['senha'])){
 	header('location: login.php');
