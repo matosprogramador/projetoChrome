@@ -1,17 +1,6 @@
-<?php 
-  include("verificar_login.php");
-?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-
-    
-  </head>
-
-  <body>
    
-    <?php include('header.html')  ?>
+    <?php include('header.php')  ?>
     
     <main id=""> 
 
@@ -19,7 +8,7 @@
 
       <div class="row">
 
-        <div class="col d-flex justify-content-center" id="cards">
+      <div class="col d-flex justify-content-center" id="cards">
         <a href='formulario.php'>
            <div class="card " style="width: 18rem;" id="imgs1">
 
@@ -34,6 +23,7 @@
            </div>
        </a>
          </div>
+
 
          <div class="col d-flex justify-content-center" id="cards">
          <a href='consulta.php'>
@@ -51,6 +41,24 @@
           </a> 
          </div>
 
+      <?php if($_SESSION['tipo'] == 'a'){ ?>
+         <div class="col d-flex justify-content-center" id="cards">
+        <a href='dashboard.php'>
+           <div class="card " style="width: 18rem;" id="imgs3">
+
+              <img class="card-img-top" src="imagens/graficos.png" alt="Card image cap">
+
+              <div class="card-body">
+                
+              <p class="nav-link">Gráficos</p>
+
+              </div>
+
+           </div>
+       </a>
+         </div>
+      <?php }?>
+
         </div>
       </div>
 
@@ -62,6 +70,4 @@
     <?php include('footer.html') ?>
     
 
-  </div>
-  </body>
-</html>
+  

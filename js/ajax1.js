@@ -222,14 +222,14 @@ function listar_usuario(pagina, quant_result_pg){
 		  data: {data:nome , pagina : pagina,
 			quant_result_pg : quant_result_pg},
 		  beforeSend: function(data){
-			  console.log("uhuuuu");
+			  	$('#botaoBusca').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>')
 				$('.mask-loading').show(); 
 			  
           },
 		  
 		  success:function (data)  {
 			setTimeout(function(){
-			 
+				$('#botaoBusca').html('consultar');
 				$('.mask-loading').hide();
 			 document.getElementById('dados').innerHTML = data;
 			 $('#dados').attr('class','col');

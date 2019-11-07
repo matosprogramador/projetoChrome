@@ -51,6 +51,19 @@ footer a:hover {
 	height: auto;
 }
 
+#imgs3 img {
+	
+	width: 61%;
+ 	height: auto;
+  	display: block;
+  	position:relative;
+  	left:50%;
+  	top:1%;
+  	transform: translate(-50%, 15%);
+ 	 
+}
+
+
 #imgs2 img {
 	
 	width: 51%;
@@ -61,6 +74,10 @@ footer a:hover {
   	top:1%;
   	transform: translate(-50%, 2%);
  	 
+}
+
+#imgs3 {
+	background-color: #f8f9fa;
 }
 
 

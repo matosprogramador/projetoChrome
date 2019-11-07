@@ -1,8 +1,6 @@
-<?php 
-  include("verificar_login.php");
-?>
 
-    <?php include ('header.html') ?>
+
+    <?php include ('header.php') ?>
     <main>
     
 
@@ -32,7 +30,7 @@
 
         <div class=" row " align="center">
             <div class="col">                                 
-                <button style= "width: 192px; margin-top:10px;" class="form-control  btn-primary btnPadrao" href="#" onclick='listar_usuario(1, 5)' > consultar</button>                                           
+                <button id='botaoBusca' style= "width: 192px; margin-top:10px;" class="form-control  btn-primary btnPadrao" href="#" onclick='listar_usuario(1, 5)' > consultar</button>                                           
             </div>
         </div>
 

@@ -1,10 +1,6 @@
-<?php 
 
-  include("verificar_login.php");
 
-?>
-
-    <?php include('header.html')  ?>
+    <?php include('header.php')  ?>
     
     <main >
    

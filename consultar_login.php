@@ -22,8 +22,17 @@ $stmt->execute();
 $result = $stmt->fetchAll();
 $total = count($result);
 
-if ($total == 1){
+if($total == 1 && $result[0]['tipo'] == 'a' ){
+	
+	$_SESSION['usuario'] =$login;
+	$_SESSION['tipo']="a";
+	header('location: index.php');
+	exit();
+}
+else if ($total == 1 &&   $result[0]['tipo'] == 'b'){
+
 	$_SESSION['usuario'] = $login;
+	$_SESSION['tipo']="b";
 	header('location: index.php');
 	exit();
 }else{

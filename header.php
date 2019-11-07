@@ -1,0 +1,68 @@
+<?php include("verificar_login.php");?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	  <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/827d725b92.js" ></script>
+</head>
+<body>
+		<header id="header"> 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+    <div class="container">
+      <a class="navbar-brand" href="index.php">
+       <img src="imagens/damas2.png" alt="Logo do Colégio Damas recife">
+     </a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+     </button>
+
+     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php"><i class="fas fa-home"></i>Home <span class="sr-only">(página atual)</span></a>
+          </li>
+
+         <li class="nav-item">
+           <a class="nav-link" href="formulario.php"><i class="far fa-calendar-alt"></i>Agendar</a>
+         </li>
+          <li class="nav-item">
+            <a class="nav-link" href="consulta.php"><i class="fas fa-search"></i>Consultar</a>
+          </li>
+          <?php
+           if($_SESSION['tipo'] == 'a'){
+          ?>
+          <li class="nav-item">
+              <a class="nav-link" href="dashboard.php"><i class="fas fa-chart-line"></i>Gráficos</a>
+            </li>
+           <?php } ?>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="sair_sessao.php"><i class="fas fa-sign-out-alt"></i>Sair</a>
+          </li>
+
+
+        </ul>
+      </div>
+
+    </div>
+    
+  
+    </nav>
+    
+    
+ </header> 
+
+
+
+
