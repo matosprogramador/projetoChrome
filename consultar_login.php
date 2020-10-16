@@ -12,6 +12,8 @@ $senha=$_POST['senha'];
 
 $conn = getConnection();
 
+
+//verificação de senha
 $sql = "SELECT * FROM login where login = :log and senha = md5(:sen)";
 
 $stmt = $conn->prepare($sql);
